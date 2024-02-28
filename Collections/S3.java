@@ -1,0 +1,29 @@
+import java.util.*;
+public class S3
+{
+static HashSet a=new HashSet();
+void saveCountryName(String s)
+{
+a.add(s);
+}
+String getCountry(String s)
+{
+if(a.contains(s))
+   return s;
+else 
+   return null;
+}
+public static void main(String args[])
+{
+S1 s=new S1();
+s.saveCountryName("USA");
+s.saveCountryName("INDIA");
+s.saveCountryName("CANADA");
+System.out.println(s.getCountry("INDIA"));
+ListIterator l=s.listIterator();
+while(l.hasPrevious())
+{
+System.out.print(l.previous()+" ");
+}
+}
+}
